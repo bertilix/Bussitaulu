@@ -237,6 +237,8 @@
 		function returnDataHandler(data) {
 			//console.log(data);
 			for (i=0; i<data.body.length; i++) {
+				//Now we replace the timestamp DIV for every bus. 
+				//Do something more sensible...
 				var timestamp = data.body[i].recordedAtTime;
 				console.log('timestamp:',timestamp);
 				if (timestamp) {
@@ -250,8 +252,9 @@
 				console.log(lat,lng);
 				L.circleMarker([lat,lng], {
 					color: 'black',
+					opacity: 0.2,
 					fillColor: 'lightyellow',
-					fillOpacity: 0.4
+					fillOpacity: 0.2
 				}).addTo(map)
 				
 				//L.circle([61.47757, 23.83982], 20, {
