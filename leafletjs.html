@@ -10,6 +10,17 @@
 </head>
 <body>
 
+	<style>
+		.bus-icon {
+			border: 2px solid red;
+			background: #a00;
+			color: white;
+			opacity: 0.6;
+			text-align: center;
+		}
+	</style>
+
+
 	<div id="timestamp" style="position:fixed; top:15px;left:60px;padding:5px;z-index:99999;background-color:#ccc;opacity:0.6">
 		 Waiting for bus data...
 	</div>
@@ -181,11 +192,29 @@
 		}
 
 		function onMapClick2(e) {
-			getAndUpdateBusPositions();
+			// Testing icons. See http://leafletjs.com/reference.html#divicon
+			var busIcon = L.divIcon({
+				className:'leaflet-div-icon',
+				iconSize: [20,20],
+				html: '33'
+			});
+			var busIcon21 = createHTMLicon('21');
+			L.marker([61.45701, 23.78500], {icon:busIcon}).addTo(map);			
+			L.marker([61.45701, 23.78800], {icon:busIcon21}).addTo(map);			
 		}
 		
 		map.on('click', onMapClick2);
 
+		function createHTMLicon (htmlOrText) {
+			return L.divIcon({
+				className:'bus-icon',
+				iconSize: [20,20],
+				html: htmlOrText
+			});
+		}
+		
+		
+		
 		var interval1;
 		function start_auto_refresh() {
 			var intervalsetting = parseInt(document.getElementById("intervalsetting").value)*1000;
@@ -250,6 +279,8 @@
 				var lat = parseFloat(loc.latitude);
 				var lng = parseFloat(loc.longitude);
 				console.log(lat,lng);
+				
+				
 				L.circleMarker([lat,lng], {
 					color: 'black',
 					opacity: 0.2,
