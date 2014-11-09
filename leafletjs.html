@@ -14,6 +14,13 @@
 		 Waiting for bus data...
 	</div>
 
+	<div id="controlpanel" style="position:fixed; color:#eee;bottom:15px;right:60px;padding:5px;z-index:99999;background-color:#444;opacity:0.8">
+		Control panel... 
+		<button onclick="start_auto_refresh()">Start autorefresh</button>
+		period in seconds:
+		<input type="number" id="intervalsetting" value="5">
+	</div>
+	
 	<div id="map" style="width: 1000px; height: 800px"></div>
 	
 	<div>Leaflet dokut: <a href="http://leafletjs.com/reference.html">Dokut</a> </div>
@@ -179,6 +186,20 @@
 		
 		map.on('click', onMapClick2);
 
+		var interval1;
+		function start_auto_refresh() {
+			var intervalsetting = parseInt(document.getElementById("intervalsetting").value)*1000;
+			if (intervalsetting === 0) {
+				console.log("Stopping updates");
+				clearInterval(interval1);
+			} else {
+				console.log("Starting update every ", intervalsetting, "ms");
+				interval1 = setInterval( function(){
+						getAndUpdateBusPositions()
+					}, intervalsetting ); //Calls that fn every xxx ms
+				}
+		}
+		
 		
 		//-----------------------------------------
 		
@@ -200,7 +221,7 @@
 				console.log('xmlhttp.onreadystatechange');
 				console.log(xmlhttp);
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-					console.log(xmlhttp.responseText);
+					console.log('xmlhttp.responseText len=',xmlhttp.responseText.length);
 					if (xmlhttp.responseText != '') {
 						var myData = JSON.parse(xmlhttp.responseText);
 						returnDataHandler(myData);
@@ -209,9 +230,7 @@
 			}
 
 			xmlhttp.open("GET", url, true);
-			//  //xmlhttp.setRequestHeader('Origin', 'kukkuu');
 			xmlhttp.send();
-	
 		}
 
 		
@@ -222,7 +241,6 @@
 				console.log('timestamp:',timestamp);
 				if (timestamp) {
 					var timediv = document.getElementById('timestamp');
-					console.log('timediv',timediv);
 					timediv.innerHTML = timestamp;
 				}
 				
@@ -230,11 +248,18 @@
 				var lat = parseFloat(loc.latitude);
 				var lng = parseFloat(loc.longitude);
 				console.log(lat,lng);
-				L.circleMarker([lat,lng], 40, {
+				L.circleMarker([lat,lng], {
 					color: 'black',
 					fillColor: 'lightyellow',
-					fillOpacity: 0.8
+					fillOpacity: 0.4
 				}).addTo(map)
+				
+				//L.circle([61.47757, 23.83982], 20, {
+				//	color: 'red',
+				//	fillColor: '#f03',
+				//	fillOpacity: 0.2
+				//}).addTo(map).bindPopup("sirkkeli");
+				
 			}
 		}
 		

@@ -4,453 +4,956 @@
     "headers" : {
       "paging" : {
         "startIndex" : 0,
-        "pageSize" : 4,
+        "pageSize" : 6,
         "moreData" : false
       }
     }
   },
   "body" : [ {
-    "recordedAtTime" : "2014-11-09T17:10:22.011+02:00",
-    "validUntilTime" : "2014-11-09T17:10:52.011+02:00",
+    "recordedAtTime" : "2014-11-09T21:54:10.014+02:00",
+    "validUntilTime" : "2014-11-09T21:54:40.014+02:00",
     "monitoredVehicleJourney" : {
       "lineRef" : "21",
       "directionRef" : "2",
       "framedVehicleJourneyRef" : {
         "dateFrameRef" : "2014-11-09",
-        "datedVehicleJourneyRef" : "http://data.itsfactory.fi/journeys/api/1/journeys/21_1645_3563_1532"
+        "datedVehicleJourneyRef" : "http://data.itsfactory.fi/journeys/api/1/journeys/21_2115_3563_1532"
       },
       "vehicleLocation" : {
-        "longitude" : "23.7421923",
-        "latitude" : "61.4978457"
+        "longitude" : "23.8009473",
+        "latitude" : "61.4666055"
       },
       "operatorRef" : "TKL",
-      "bearing" : "99.0",
-      "delay" : "P0Y0M0DT0H2M11.000S",
-      "vehicleRef" : "TKL_004",
+      "bearing" : "113.0",
+      "delay" : "-P0Y0M0DT0H2M55.000S",
+      "vehicleRef" : "TKL_003",
       "journeyPatternRef" : "21",
       "originShortName" : "1532",
       "destinationShortName" : "3563",
-      "originAimedDepartureTime" : "1645",
+      "originAimedDepartureTime" : "2115",
       "onwardCalls" : [ {
-        "expectedArrivalTime" : "2014-11-09T17:10:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:10:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0029",
-        "order" : "26"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:11:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:11:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0025",
-        "order" : "27"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:12:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:12:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0017",
-        "order" : "28"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:14:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:14:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0012",
-        "order" : "29"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:15:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:15:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0520",
-        "order" : "30"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:17:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:17:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0522",
-        "order" : "31"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:18:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:18:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2500",
-        "order" : "32"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:19:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:19:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2526",
-        "order" : "33"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:20:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:20:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2556",
-        "order" : "34"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:21:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:21:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2506",
-        "order" : "35"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:22:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:22:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2508",
-        "order" : "36"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:24:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:24:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2528",
-        "order" : "37"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:25:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:25:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3110",
-        "order" : "38"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:26:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:26:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3090",
-        "order" : "39"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:27:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:27:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3092",
-        "order" : "40"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:28:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:28:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3102",
-        "order" : "41"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:28:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:28:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3044",
-        "order" : "42"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:29:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:29:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3046",
-        "order" : "43"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:30:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:30:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T21:55:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:55:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3048",
         "order" : "44"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:30:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:30:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T21:55:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:55:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3050",
         "order" : "45"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:31:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:31:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T21:56:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:56:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3054",
         "order" : "46"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:32:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:32:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T21:57:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:57:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3122",
         "order" : "47"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:33:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:33:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T21:58:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:58:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3124",
         "order" : "48"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:33:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:33:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T21:58:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:58:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3650",
         "order" : "49"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:34:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:34:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T21:59:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:59:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3652",
         "order" : "50"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:35:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:35:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:00:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:00:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3080",
         "order" : "51"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:37:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:37:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:02:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:02:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3563",
         "order" : "52"
       } ]
     }
   }, {
-    "recordedAtTime" : "2014-11-09T17:10:22.010+02:00",
-    "validUntilTime" : "2014-11-09T17:10:52.010+02:00",
+    "recordedAtTime" : "2014-11-09T21:54:10.014+02:00",
+    "validUntilTime" : "2014-11-09T21:54:40.014+02:00",
     "monitoredVehicleJourney" : {
       "lineRef" : "21",
       "directionRef" : "1",
       "framedVehicleJourneyRef" : {
         "dateFrameRef" : "2014-11-09",
-        "datedVehicleJourneyRef" : "http://data.itsfactory.fi/journeys/api/1/journeys/21_1645_1533_3563"
+        "datedVehicleJourneyRef" : "http://data.itsfactory.fi/journeys/api/1/journeys/21_2125_1533_3563"
       },
       "vehicleLocation" : {
-        "longitude" : "23.7516555",
-        "latitude" : "61.4973887"
+        "longitude" : "23.7307172",
+        "latitude" : "61.5006150"
       },
       "operatorRef" : "TKL",
-      "bearing" : "342.0",
-      "delay" : "P0Y0M0DT0H0M52.000S",
-      "vehicleRef" : "TKL_005",
+      "bearing" : "260.0",
+      "delay" : "P0Y0M0DT0H1M33.000S",
+      "vehicleRef" : "TKL_002",
       "journeyPatternRef" : "21",
       "originShortName" : "3563",
       "destinationShortName" : "1533",
-      "originAimedDepartureTime" : "1645",
+      "originAimedDepartureTime" : "2125",
       "onwardCalls" : [ {
-        "expectedArrivalTime" : "2014-11-09T17:10:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:10:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0024",
-        "order" : "29"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:11:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:11:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0028",
-        "order" : "30"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:13:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:13:00+02:00",
-        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0098",
-        "order" : "31"
-      }, {
-        "expectedArrivalTime" : "2014-11-09T17:14:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:14:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T21:54:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:54:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1002",
         "order" : "32"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:15:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:15:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T21:55:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:55:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1006",
         "order" : "33"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:16:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:16:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T21:57:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:57:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1010",
         "order" : "34"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:18:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:18:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T21:58:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:58:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1066",
         "order" : "35"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:19:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:19:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T21:59:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:59:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1068",
         "order" : "36"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:20:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:20:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:01:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:01:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1450",
         "order" : "37"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:21:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:21:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:02:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:02:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1643",
         "order" : "38"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:22:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:22:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:03:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:03:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1822",
         "order" : "39"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:23:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:23:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:04:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:04:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1820",
         "order" : "40"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:24:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:24:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:05:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:05:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1622",
         "order" : "41"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:25:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:25:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:06:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:06:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1624",
         "order" : "42"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:26:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:26:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:07:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:07:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1626",
         "order" : "43"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:27:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:27:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:08:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:08:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1628",
         "order" : "44"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:28:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:28:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:08:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:08:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1700",
         "order" : "45"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:28:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:28:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:09:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:09:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1704",
         "order" : "46"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:29:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:29:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:09:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:09:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1710",
         "order" : "47"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:29:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:29:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:10:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:10:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1695",
         "order" : "48"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:30:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:30:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:10:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:10:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1697",
         "order" : "49"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:31:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:31:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:11:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:11:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1605",
         "order" : "50"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:31:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:31:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:12:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:12:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1603",
         "order" : "51"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:32:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:32:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:13:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:13:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1539",
         "order" : "52"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:33:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:33:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:13:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:13:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1537",
         "order" : "53"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:34:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:34:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:14:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:14:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1535",
         "order" : "54"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:35:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:35:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:15:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:15:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1533",
         "order" : "55"
       } ]
     }
   }, {
-    "recordedAtTime" : "2014-11-09T17:10:22.010+02:00",
-    "validUntilTime" : "2014-11-09T17:10:52.010+02:00",
+    "recordedAtTime" : "2014-11-09T21:54:10.014+02:00",
+    "validUntilTime" : "2014-11-09T21:54:40.014+02:00",
+    "monitoredVehicleJourney" : {
+      "lineRef" : "21",
+      "directionRef" : "2",
+      "framedVehicleJourneyRef" : {
+        "dateFrameRef" : "2014-11-09",
+        "datedVehicleJourneyRef" : "http://data.itsfactory.fi/journeys/api/1/journeys/21_2145_3563_1532"
+      },
+      "vehicleLocation" : {
+        "longitude" : "23.6233727",
+        "latitude" : "61.5154662"
+      },
+      "operatorRef" : "TKL",
+      "bearing" : "64.0",
+      "delay" : "P0Y0M0DT0H1M4.000S",
+      "vehicleRef" : "TKL_005",
+      "journeyPatternRef" : "21",
+      "originShortName" : "1532",
+      "destinationShortName" : "3563",
+      "originAimedDepartureTime" : "2145",
+      "onwardCalls" : [ {
+        "expectedArrivalTime" : "2014-11-09T21:55:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:55:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1821",
+        "order" : "14"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:56:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:56:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1823",
+        "order" : "15"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:57:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:57:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1642",
+        "order" : "16"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:59:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:59:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1451",
+        "order" : "17"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:59:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:59:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1075",
+        "order" : "18"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:00:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:00:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1067",
+        "order" : "19"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:01:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:01:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1013",
+        "order" : "20"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:02:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:02:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1011",
+        "order" : "21"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:04:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:04:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1009",
+        "order" : "22"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:05:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:05:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1007",
+        "order" : "23"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:06:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:06:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1003",
+        "order" : "24"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:07:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:07:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0099",
+        "order" : "25"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:09:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:09:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0029",
+        "order" : "26"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:10:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:10:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0025",
+        "order" : "27"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:11:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:11:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0017",
+        "order" : "28"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:13:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:13:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0012",
+        "order" : "29"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:14:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:14:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0520",
+        "order" : "30"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:16:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:16:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0522",
+        "order" : "31"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:17:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:17:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2500",
+        "order" : "32"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:18:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:18:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2526",
+        "order" : "33"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:19:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:19:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2556",
+        "order" : "34"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:20:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:20:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2506",
+        "order" : "35"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:21:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:21:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2508",
+        "order" : "36"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:23:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:23:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2528",
+        "order" : "37"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:24:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:24:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3110",
+        "order" : "38"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:25:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:25:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3090",
+        "order" : "39"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:26:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:26:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3092",
+        "order" : "40"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:27:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:27:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3102",
+        "order" : "41"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:27:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:27:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3044",
+        "order" : "42"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:28:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:28:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3046",
+        "order" : "43"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:29:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:29:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3048",
+        "order" : "44"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:29:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:29:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3050",
+        "order" : "45"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:30:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:30:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3054",
+        "order" : "46"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:31:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:31:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3122",
+        "order" : "47"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:32:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:32:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3124",
+        "order" : "48"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:32:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:32:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3650",
+        "order" : "49"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:33:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:33:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3652",
+        "order" : "50"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:34:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:34:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3080",
+        "order" : "51"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:36:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:36:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3563",
+        "order" : "52"
+      } ]
+    }
+  }, {
+    "recordedAtTime" : "2014-11-09T21:54:10.014+02:00",
+    "validUntilTime" : "2014-11-09T21:54:40.014+02:00",
+    "monitoredVehicleJourney" : {
+      "lineRef" : "21",
+      "directionRef" : "1",
+      "framedVehicleJourneyRef" : {
+        "dateFrameRef" : "2014-11-09",
+        "datedVehicleJourneyRef" : "http://data.itsfactory.fi/journeys/api/1/journeys/21_2145_1533_3563"
+      },
+      "vehicleLocation" : {
+        "longitude" : "23.7755712",
+        "latitude" : "61.4752070"
+      },
+      "operatorRef" : "TKL",
+      "bearing" : "9.0",
+      "delay" : "-P0Y0M0DT0H0M21.000S",
+      "vehicleRef" : "TKL_004",
+      "journeyPatternRef" : "21",
+      "originShortName" : "3563",
+      "destinationShortName" : "1533",
+      "originAimedDepartureTime" : "2145",
+      "onwardCalls" : [ {
+        "expectedArrivalTime" : "2014-11-09T21:54:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:54:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3109",
+        "order" : "16"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:55:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:55:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2529",
+        "order" : "17"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:56:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:56:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2509",
+        "order" : "18"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:57:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:57:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2569",
+        "order" : "19"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:57:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:57:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2527",
+        "order" : "20"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:58:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:58:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2525",
+        "order" : "21"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:59:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:59:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2505",
+        "order" : "22"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:00:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:00:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2503",
+        "order" : "23"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:01:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:01:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/2501",
+        "order" : "24"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:03:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:03:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0523",
+        "order" : "25"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:05:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:05:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0519",
+        "order" : "26"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:07:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:07:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0015",
+        "order" : "27"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:08:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:08:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0016",
+        "order" : "28"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:09:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:09:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0024",
+        "order" : "29"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:10:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:10:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0028",
+        "order" : "30"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:11:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:11:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0098",
+        "order" : "31"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:12:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:12:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1002",
+        "order" : "32"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:13:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:13:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1006",
+        "order" : "33"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:15:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:15:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1010",
+        "order" : "34"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:16:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:16:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1066",
+        "order" : "35"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:17:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:17:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1068",
+        "order" : "36"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:19:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:19:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1450",
+        "order" : "37"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:20:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:20:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1643",
+        "order" : "38"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:21:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:21:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1822",
+        "order" : "39"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:22:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:22:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1820",
+        "order" : "40"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:23:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:23:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1622",
+        "order" : "41"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:24:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:24:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1624",
+        "order" : "42"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:25:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:25:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1626",
+        "order" : "43"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:26:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:26:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1628",
+        "order" : "44"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:26:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:26:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1700",
+        "order" : "45"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:27:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:27:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1704",
+        "order" : "46"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:27:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:27:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1710",
+        "order" : "47"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:28:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:28:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1695",
+        "order" : "48"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:28:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:28:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1697",
+        "order" : "49"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:29:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:29:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1605",
+        "order" : "50"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:30:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:30:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1603",
+        "order" : "51"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:31:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:31:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1539",
+        "order" : "52"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:31:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:31:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1537",
+        "order" : "53"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:32:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:32:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1535",
+        "order" : "54"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:33:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:33:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/1533",
+        "order" : "55"
+      } ]
+    }
+  }, {
+    "recordedAtTime" : "2014-11-09T21:54:10.014+02:00",
+    "validUntilTime" : "2014-11-09T21:54:40.014+02:00",
     "monitoredVehicleJourney" : {
       "lineRef" : "12",
       "directionRef" : "1",
       "framedVehicleJourneyRef" : {
         "dateFrameRef" : "2014-11-09",
-        "datedVehicleJourneyRef" : "http://data.itsfactory.fi/journeys/api/1/journeys/12_1655_0005_3134"
+        "datedVehicleJourneyRef" : "http://data.itsfactory.fi/journeys/api/1/journeys/12_2155_0005_3134"
       },
       "vehicleLocation" : {
-        "longitude" : "23.7844467",
-        "latitude" : "61.4864738"
+        "longitude" : "23.8306570",
+        "latitude" : "61.4610333"
       },
       "operatorRef" : "TKL",
       "bearing" : "0.0",
-      "delay" : "P0Y0M0DT0H1M20.000S",
+      "delay" : "P0Y0M0DT0H0M0.000S",
       "vehicleRef" : "TKL_024",
       "journeyPatternRef" : "12",
       "originShortName" : "3134",
       "destinationShortName" : "0005",
-      "originAimedDepartureTime" : "1655",
+      "originAimedDepartureTime" : "2155",
       "onwardCalls" : [ {
-        "expectedArrivalTime" : "2014-11-09T17:10:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:10:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T21:55:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:55:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3134",
+        "order" : "1"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:55:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:55:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3141",
+        "order" : "2"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:56:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:56:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3143",
+        "order" : "3"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:57:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:57:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3125",
+        "order" : "4"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:58:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:58:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3127",
+        "order" : "5"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:59:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:59:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3129",
+        "order" : "6"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:00:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:00:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3131",
+        "order" : "7"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:01:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:01:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3121",
+        "order" : "8"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:02:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:02:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3123",
+        "order" : "9"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:03:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:03:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3095",
+        "order" : "10"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:03:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:03:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3093",
+        "order" : "11"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:04:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:04:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3041",
+        "order" : "12"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:05:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:05:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3039",
+        "order" : "13"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:05:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:05:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3037",
+        "order" : "14"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:06:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:06:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3035",
+        "order" : "15"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:06:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:06:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3033",
+        "order" : "16"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:07:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:07:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3031",
+        "order" : "17"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:08:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:08:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3029",
+        "order" : "18"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:09:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:09:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3027",
+        "order" : "19"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:09:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:09:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3025",
         "order" : "20"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:11:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:11:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:10:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:10:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3001",
         "order" : "21"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:13:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:13:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:12:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:12:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0525",
         "order" : "22"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:14:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:14:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:13:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:13:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0601",
         "order" : "23"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:15:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:15:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:14:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:14:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0523",
         "order" : "24"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:17:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:17:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:16:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:16:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0519",
         "order" : "25"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:19:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:19:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:18:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:18:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0005",
         "order" : "26"
       } ]
     }
   }, {
-    "recordedAtTime" : "2014-11-09T17:10:22.010+02:00",
-    "validUntilTime" : "2014-11-09T17:10:52.010+02:00",
+    "recordedAtTime" : "2014-11-09T21:54:10.014+02:00",
+    "validUntilTime" : "2014-11-09T21:54:40.014+02:00",
     "monitoredVehicleJourney" : {
       "lineRef" : "12",
       "directionRef" : "2",
       "framedVehicleJourneyRef" : {
         "dateFrameRef" : "2014-11-09",
-        "datedVehicleJourneyRef" : "http://data.itsfactory.fi/journeys/api/1/journeys/12_1655_3134_0005"
+        "datedVehicleJourneyRef" : "http://data.itsfactory.fi/journeys/api/1/journeys/12_2155_3134_0005"
       },
       "vehicleLocation" : {
-        "longitude" : "23.8068048",
-        "latitude" : "61.4729810"
+        "longitude" : "23.7614710",
+        "latitude" : "61.4973853"
       },
       "operatorRef" : "TKL",
-      "bearing" : "82.0",
-      "delay" : "P0Y0M0DT0H1M17.000S",
+      "bearing" : "0.0",
+      "delay" : "P0Y0M0DT0H0M0.000S",
       "vehicleRef" : "TKL_94",
       "journeyPatternRef" : "12",
       "originShortName" : "0005",
       "destinationShortName" : "3134",
-      "originAimedDepartureTime" : "1655",
+      "originAimedDepartureTime" : "2155",
       "onwardCalls" : [ {
-        "expectedArrivalTime" : "2014-11-09T17:10:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:10:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T21:55:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:55:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0005",
+        "order" : "1"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:56:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:56:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0520",
+        "order" : "2"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:57:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:57:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0522",
+        "order" : "3"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T21:59:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T21:59:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/0524",
+        "order" : "4"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:00:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:00:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3024",
+        "order" : "5"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:01:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:01:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3026",
+        "order" : "6"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:02:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:02:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3028",
+        "order" : "7"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:02:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:02:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3030",
+        "order" : "8"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:03:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:03:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3032",
+        "order" : "9"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:04:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:04:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3034",
+        "order" : "10"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:05:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:05:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3036",
+        "order" : "11"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:06:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:06:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3038",
+        "order" : "12"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:06:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:06:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3040",
+        "order" : "13"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:07:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:07:00+02:00",
+        "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3094",
+        "order" : "14"
+      }, {
+        "expectedArrivalTime" : "2014-11-09T22:08:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:08:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3096",
         "order" : "15"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:11:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:11:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:09:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:09:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3122",
         "order" : "16"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:12:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:12:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:10:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:10:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3126",
         "order" : "17"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:13:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:13:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:11:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:11:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3128",
         "order" : "18"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:13:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:13:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:12:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:12:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3130",
         "order" : "19"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:14:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:14:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:13:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:13:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3132",
         "order" : "20"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:16:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:16:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:14:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:14:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3136",
         "order" : "21"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:17:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:17:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:15:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:15:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3138",
         "order" : "22"
       }, {
-        "expectedArrivalTime" : "2014-11-09T17:18:00+02:00",
-        "expectedDepartureTime" : "2014-11-09T17:18:00+02:00",
+        "expectedArrivalTime" : "2014-11-09T22:17:00+02:00",
+        "expectedDepartureTime" : "2014-11-09T22:17:00+02:00",
         "stopPointRef" : "http://data.itsfactory.fi/journeys/api/1/stop-points/3134",
         "order" : "23"
       } ]
