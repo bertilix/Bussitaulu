@@ -105,7 +105,9 @@ function serveBinaryFile (my_path,response) {
 			     }  
 				 else {
 					console.log('Serving response file, len:',data.length);
-					response.writeHeader(200);  
+					response.writeHeader(200, {
+						'Access-Control-Allow-Origin': '*'
+						});
 			        response.write(data, "binary");  
 			        response.end();
 				}	 
