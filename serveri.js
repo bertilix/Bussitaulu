@@ -20,22 +20,22 @@ my_http.createServer( function(request,response){
 	}
 	
 	if (my_path === '/fetch_buses') {
-		console.log('/fetch_buses started')
+		//console.log('/fetch_buses started')
 		response.writeHeader(200, {"Content-Type": "text/plain"});  
 		response.write("Now fetching bus data...\n"); 
 
 		fetch_bus_data(ITSfetchURL);
 
 		response.write("Bus data fetch started.\n"); 
-		console.log('/fetch_buses ending.');
+		//console.log('/fetch_buses ending.');
 		response.end();
 		return;
 	}
 	
 	if (my_path === '/get_buses') {
-		console.log('/get_buses started')
+		//console.log('/get_buses started')
 		//First trigger fetching new bus data, will arrive asynchronously
-		console.log('/get_buses triggering fetch_bus_data')
+		//console.log('/get_buses triggering fetch_bus_data')
 		fetch_bus_data(ITSfetchURL);
 		//Meanwhile, serve the most recent bus data.
 		//if bus_data.json exists... 
@@ -44,7 +44,7 @@ my_http.createServer( function(request,response){
 			//Now the bus data will contain the latest update, 
 			//or could be leftover from previous session.
 			//Serve it anyway.
-			console.log('/get_buses serving most recent bus data from:',busdata_path);
+			//console.log('/get_buses serving most recent bus data from:',busdata_path);
 			serveBinaryFile (busdataFilename,response);
 			return;
 		} else {
@@ -55,7 +55,7 @@ my_http.createServer( function(request,response){
 			response.end();  			
 		}
 		
-		console.log('/get_buses ending');
+		//console.log('/get_buses ending');
 		//response.end();   //Should have been done already? 
 		return;
 	}
@@ -70,8 +70,8 @@ my_http.createServer( function(request,response){
 function fetch_bus_data (URLtoFetch) {
 		
 		my_http.get( URLtoFetch, function(res) {
-			console.log("http.get Got res.statusCode: " + res.statusCode);
-			console.log("http.get res.headers:" + JSON.stringify(res.headers));
+			//console.log("http.get Got res.statusCode: " + res.statusCode);
+			//console.log("http.get res.headers:" + JSON.stringify(res.headers));
 			res.setEncoding('utf8');
 			var result = '';
 			res.on('data', function(chunk) {
@@ -79,7 +79,7 @@ function fetch_bus_data (URLtoFetch) {
 				result += chunk;
 			});
 			res.on('end', function() {
-				console.log('res got end event, result len:',result.length);
+				//console.log('res got end event, result len:',result.length);
 				write_result_to_file('bus_data.json', result);
 			});
 		}).on('error', function(e) {
@@ -90,7 +90,7 @@ function fetch_bus_data (URLtoFetch) {
 
 function serveBinaryFile (my_path,response) {
 	var full_path = path.join(process.cwd(),my_path);
-	console.log('serveBinaryFile: looking for file',full_path);
+	//console.log('serveBinaryFile: looking for file',full_path);
 	filesys.exists(full_path, function(exists){
 		if (!exists){
 			response.writeHeader(404, {"Content-Type": "text/plain"});  
@@ -104,7 +104,7 @@ function serveBinaryFile (my_path,response) {
 			         response.end();  			   
 			     }  
 				 else {
-					console.log('Serving response file, len:',data.length);
+					//console.log('Serving response file, len:',data.length);
 					response.writeHeader(200, {
 						'Access-Control-Allow-Origin': '*'
 						});
@@ -122,7 +122,7 @@ function write_result_to_file(filename, result) {
 		if(err) {
 			console.log(err);
 		} else {
-			console.log('Wrote file:',filename);
+			//console.log('Wrote file:',filename);
 		}	
 	});
 
