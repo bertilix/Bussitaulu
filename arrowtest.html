@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrow test</title>
+	<meta charset="utf-8" />
+
+</head>
+<body>
+
+<style>
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid black;
+}
+
+.arrow-up2 {
+	width: 0; 
+	height: 0; 
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-bottom: 100px solid black;
+}
+
+.arrow-up3 {
+	width: 0; 
+	height: 0; 
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-bottom: 100px dashed red;
+}
+
+.flag {
+   height:0px;
+   width:0px;
+   border-top:100px dashed transparent;
+   border-right:100px solid #955;
+}
+
+
+.rotate60deg {
+	-moz-transform: rotate(60deg);     
+    -o-transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+
+</style>
+
+
+
+
+
+
+<H1>CSS Triangle tricks</H1>
+from: <a href="http://css-tricks.com/snippets/css/css-triangle/">http://css-tricks.com/snippets/css/css-triangle/</a>
+
+<p>  Tahan tulee kolmio: </p>
+<div class="arrow-up">
+</div>
+
+<p>  Tahan terävä kolmio: </p>
+<div class="arrow-up2">
+</div>
+
+<p>  Tahan rotated kolmio: </p>
+<div class="arrow-up3">
+</div>
+
+<div class="arrow-up2 rotate60deg">
+</div>
+
+
+<H1>Eikun jatkuu</H1>
+
+<style>
+.arrow-rectangle {
+  border-top: 6px solid green;
+  border-left: 28px solid green;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.arrow-triangle {
+  border-top: 10px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid green;
+  display: inline-block;
+  position: relative;
+  left: -4px;
+  vertical-align: middle;
+}
+</style>
+
+<div class="arrow-rectangle"></div>
+<div class="arrow-triangle"></div>
+
+
+
+<H1>Jatkuu</H1>
+Ben: http://css-tricks.com/snippets/css/css-triangle/#comment-317340
+Its also worth nothing how to add a triangle/arrow to a element without any extra mark-up.
+
+<style>
+	.add-on { position: relative }
+	.add-on:after {
+		border-bottom: 4px solid transparent;
+		border-left: 4px solid #EDEDED;
+		border-top: 4px solid transparent;
+		content: " ";
+		height: 0;
+		left: 0;
+		margin-top: -4px;
+		position: absolute;
+		top: 50%;
+		width: 0;
+	}
+</style>
+
+
+<div class="add-on">
+Tässä on jotain ihan tavallista tekstiä
+</div>
+
+
+</body>
+</html>
