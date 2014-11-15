@@ -232,6 +232,7 @@ function getAndUpdateBusPositions() {
 function returnDataHandler(data) {
 	//console.log(data);
 	for (i=0; i<data.body.length; i++) {
+	
 		//Now we replace the timestamp DIV for every bus. 
 		//Do something more sensible...
 		var timestamp = data.body[i].recordedAtTime;
@@ -241,10 +242,12 @@ function returnDataHandler(data) {
 			timediv.innerHTML = timestamp;
 		}
 		
-		var loc = data.body[i].monitoredVehicleJourney.vehicleLocation
+		var lineRef = data.body[i].monitoredVehicleJourney.lineRef;
+		var vehicleRef = data.body[i].monitoredVehicleJourney.vehicleRef;
+		var loc = data.body[i].monitoredVehicleJourney.vehicleLocation;
 		var lat = parseFloat(loc.latitude);
 		var lng = parseFloat(loc.longitude);
-		console.log(lat,lng);
+		console.log('Line, vehicle, lat, lng:', lineRef, vehicleRef, lat,lng);
 		
 		
 		L.circleMarker([lat,lng], {
@@ -253,6 +256,9 @@ function returnDataHandler(data) {
 			fillColor: 'lightyellow',
 			fillOpacity: 0.2
 		}).addTo(map)
+		
+		var busIcon = createHTMLicon(lineRef);
+		L.marker([lat,lng], {icon:busIcon}).addTo(map);			
 		
 		//L.circle([61.47757, 23.83982], 20, {
 		//	color: 'red',
