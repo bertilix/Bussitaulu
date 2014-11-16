@@ -3,12 +3,16 @@
 
 var ITSfetchURL = 'http://data.itsfactory.fi/journeys/api/1/vehicle-activity/?lineRef=21,33,12'
 var busdataFilename = 'bus_data.json';
+var testBusdataFilename = 'test_data/bus_data_{index}.json';
+var testBusdataFileIndex = 0;
+
 
 var sys = require("sys"),
 my_http = require("http"),
 path = require("path"),
 url = require("url"),
 filesys = require("fs");
+
 
 my_http.createServer( function(request,response){
 	var my_path = url.parse(request.url).pathname;
@@ -59,6 +63,28 @@ my_http.createServer( function(request,response){
 		//response.end();   //Should have been done already? 
 		return;
 	}
+
+	if (my_path === '/get_test_buses') {
+		console.log('/get_test_buses started')
+		//Use the previously updated file index  
+		var testFilename = testBusdataFilename.replace('{index}', testBusdataFileIndex);
+		console.log('testFilename = ', testFilename);
+		var busdata_path = path.join(process.cwd(),testFilename);
+		if (path.existsSync(busdata_path)) {  //This check is blocking :-(
+			console.log('/get_test_buses serving test data from:',busdata_path);
+			serveBinaryFile (testFilename,response);
+		} else {
+			//So the file does not exist, serve empty file
+			console.log('/get_test_buses serving empty file, since bus data file not found:',busdata_path);
+			response.writeHeader(200, {"Content-Type": "text/plain"});  
+			response.end();  			
+		}		
+		//Finally always advance file index for next round, clamp to 0...9
+		testBusdataFileIndex = (testBusdataFileIndex + 1) % 10;				
+		console.log('/get_test_buses ending');
+		return;
+	}
+
 	
 	// None of the fixed routes, so serve files	
 	serveBinaryFile (my_path,response);

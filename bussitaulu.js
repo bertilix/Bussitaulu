@@ -203,8 +203,8 @@ function start_auto_refresh() {
 
 // var url = 'http://data.itsfactory.fi/journeys/api/1/vehicle-activity/'
 
-//var url = 'http://localhost:8080/bus_data.json'
 var url = 'http://localhost:8080/get_buses'
+//var url = 'http://localhost:8080/get_test_buses'
 
 // var url = 'http://data.itsfactory.fi/journeys/api/1/vehicle-activity/?lineRef=21&callback=?'
 
@@ -249,16 +249,17 @@ function returnDataHandler(data) {
 		var lng = parseFloat(loc.longitude);
 		console.log('Line, vehicle, lat, lng:', lineRef, vehicleRef, lat,lng);
 		
+		recordBusData(vehicleRef,lineRef,lat,lng);
 		
-		L.circleMarker([lat,lng], {
+/* 		L.circleMarker([lat,lng], {
 			color: 'black',
 			opacity: 0.2,
 			fillColor: 'lightyellow',
 			fillOpacity: 0.2
-		}).addTo(map)
+		}).addTo(map) */
 		
-		var busIcon = createHTMLicon(lineRef);
-		L.marker([lat,lng], {icon:busIcon}).addTo(map);			
+		//var busIcon = createHTMLicon(lineRef);
+		//L.marker([lat,lng], {icon:busIcon}).addTo(map);			
 		
 		//L.circle([61.47757, 23.83982], 20, {
 		//	color: 'red',
@@ -266,6 +267,41 @@ function returnDataHandler(data) {
 		//	fillOpacity: 0.2
 		//}).addTo(map).bindPopup("sirkkeli");
 		
+	}
+	renderBusData();
+}
+
+var busDataTable = {
+	'testVehicleRef': {
+		'name': 'testVehicle',
+		'number': '99',
+		'lat': 61.4732485,
+		'lng': 23.8096987
+		},
+	'dummy': {
+		'name': 'oho',
+		'number': '98',
+		'lat': 61.4701385,
+		'lng': 23.8025887
+		},
+		
+}
+
+function recordBusData(vehicleRef,lineRef,lat,lng) {
+	busDataTable[vehicleRef] = {
+		'name': lineRef,
+		'lat': lat,
+		'lng': lng
+	}
+	console.log('busDataTable is now:', busDataTable);	
+}
+
+
+function renderBusData () {
+	for(var vehicleRef in busDataTable) {
+		var bus = busDataTable[vehicleRef];
+		var busIcon = createHTMLicon(bus.name);
+		L.marker([bus.lat,bus.lng], {icon:busIcon}).addTo(map);		
 	}
 }
 

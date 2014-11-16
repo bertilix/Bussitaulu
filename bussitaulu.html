@@ -12,10 +12,11 @@
 
 	<style>
 		.bus-icon {
-			border: 2px solid red;
-			background: #a00;
+			border: 1px solid red;
+			background: #a00; /*Fallback if rgba below fails*/
+			background: rgba(255,0,0,0.3);
 			color: white;
-			opacity: 0.6;
+			opacity: 0.8;
 			text-align: center;
 		}
 	</style>
@@ -32,7 +33,7 @@
 		<input type="number" id="intervalsetting" value="5">
 	</div>
 	
-	<div id="map" style="width: 1000px; height: 800px"></div>
+	<div id="map" style="width: 1000px; height: 500px"></div>
 	
 	<div>Leaflet dokut: <a href="http://leafletjs.com/reference.html">Dokut</a> </div>
 	
