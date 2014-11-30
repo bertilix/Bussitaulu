@@ -203,8 +203,8 @@ function start_auto_refresh() {
 
 // var url = 'http://data.itsfactory.fi/journeys/api/1/vehicle-activity/'
 
-var url = 'http://localhost:8080/get_buses'
-//var url = 'http://localhost:8080/get_test_buses'
+//var url = 'http://localhost:8080/get_buses'
+var url = 'http://localhost:8080/get_test_buses'
 
 // var url = 'http://data.itsfactory.fi/journeys/api/1/vehicle-activity/?lineRef=21&callback=?'
 
@@ -213,10 +213,10 @@ function getAndUpdateBusPositions() {
 	var xmlhttp = new XMLHttpRequest();
 
 	xmlhttp.onreadystatechange = function() {
-		console.log('xmlhttp.onreadystatechange');
-		console.log(xmlhttp);
+		//console.log('xmlhttp.onreadystatechange');
+		//console.log(xmlhttp);
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			console.log('xmlhttp.responseText len=',xmlhttp.responseText.length);
+			//console.log('xmlhttp.responseText len=',xmlhttp.responseText.length);
 			if (xmlhttp.responseText != '') {
 				var myData = JSON.parse(xmlhttp.responseText);
 				returnDataHandler(myData);
@@ -283,22 +283,56 @@ var busDataTable = {
 		'number': '98',
 		'lat': 61.4701385,
 		'lng': 23.8025887
-		},
-		
+		}
 }
 
 function recordBusData(vehicleRef,lineRef,lat,lng) {
-	busDataTable[vehicleRef] = {
-		'name': lineRef,
-		'lat': lat,
-		'lng': lng
+	if (!busDataTable[vehicleRef]) {
+		busDataTable[vehicleRef] = {};
 	}
-	console.log('busDataTable is now:', busDataTable);	
+	busDataTable[vehicleRef].name = lineRef;
+	busDataTable[vehicleRef].lat = lat;
+	busDataTable[vehicleRef].lng = lng;
+	if (!busDataTable[vehicleRef].positions) {
+		busDataTable[vehicleRef].positions = [];
+	}
+	busDataTable[vehicleRef].positions.push([lat,lng]);
+	if (busDataTable[vehicleRef].positions.length > 5) {
+		busDataTable[vehicleRef].positions.shift();
+	}
+	if (!busDataTable[vehicleRef].markers) {
+		busDataTable[vehicleRef].markers = [];
+	}
+	console.log('busDataTable[',vehicleRef,']is now:', busDataTable[vehicleRef]);	
 }
 
+var opacityTable = [0.2, 0.3, 0.4, 0.6, 1.0];
 
 function renderBusData () {
-	for(var vehicleRef in busDataTable) {
+	for (var vehicleRef in busDataTable) {
+		var bus = busDataTable[vehicleRef];
+		//Remove old markers if any
+		//for (var i in bus.markers) {
+		//	bus.marker[i].off();
+		//}
+		var busIcon = createHTMLicon(bus.name);
+		for (var pos in bus.positions) {
+			var lat = bus.positions[pos][0];
+			var lng = bus.positions[pos][1];
+			if (!bus.markers[pos]) {
+				var newmarker = L.marker([lat,lng], {icon:busIcon}).addTo(map);
+				console.log('newmarker:', newmarker);
+				bus.markers[pos] = newmarker;
+			}
+			bus.markers[pos].setLatLng([lat,lng]);
+			bus.markers[pos].setOpacity(opacityTable[pos]);
+			
+		}
+	}
+}
+
+function renderBusDataOLD () {
+	for (var vehicleRef in busDataTable) {
 		var bus = busDataTable[vehicleRef];
 		var busIcon = createHTMLicon(bus.name);
 		L.marker([bus.lat,bus.lng], {icon:busIcon}).addTo(map);		
