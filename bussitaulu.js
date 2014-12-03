@@ -171,9 +171,9 @@ function onMapClick2(e) {
 
 map.on('click', onMapClick2);
 
-function createHTMLicon (htmlOrText) {
+function createHTMLicon (htmlOrText, classNames) {
 	return L.divIcon({
-		className:'bus-icon',
+		className: classNames,   //'bus-icon'
 		iconSize: [20,20],
 		html: htmlOrText
 	});
@@ -203,8 +203,8 @@ function start_auto_refresh() {
 
 // var url = 'http://data.itsfactory.fi/journeys/api/1/vehicle-activity/'
 
-//var url = 'http://localhost:8080/get_buses'
-var url = 'http://localhost:8080/get_test_buses'
+var url = 'http://localhost:8080/get_buses'
+//var url = 'http://localhost:8080/get_test_buses'
 
 // var url = 'http://data.itsfactory.fi/journeys/api/1/vehicle-activity/?lineRef=21&callback=?'
 
@@ -315,14 +315,19 @@ function renderBusData () {
 		//for (var i in bus.markers) {
 		//	bus.marker[i].off();
 		//}
-		var busIcon = createHTMLicon(bus.name);
+		var busIcon = createHTMLicon(bus.name, 'bus-icon');
+		var trailIcon = createHTMLicon(bus.name, 'trail-icon');
 		for (var pos in bus.positions) {
 			var lat = bus.positions[pos][0];
 			var lng = bus.positions[pos][1];
 			if (!bus.markers[pos]) {
-				var newmarker = L.marker([lat,lng], {icon:busIcon}).addTo(map);
+				var newmarker = L.marker([lat,lng], {icon:trailIcon}).addTo(map);
 				console.log('newmarker:', newmarker);
 				bus.markers[pos] = newmarker;
+			}
+			if (pos == 4) {
+				console.log(4);
+				bus.markers[pos].setIcon(busIcon);
 			}
 			bus.markers[pos].setLatLng([lat,lng]);
 			bus.markers[pos].setOpacity(opacityTable[pos]);
@@ -334,7 +339,7 @@ function renderBusData () {
 function renderBusDataOLD () {
 	for (var vehicleRef in busDataTable) {
 		var bus = busDataTable[vehicleRef];
-		var busIcon = createHTMLicon(bus.name);
+		var busIcon = createHTMLicon(bus.name, 'bus-icon');
 		L.marker([bus.lat,bus.lng], {icon:busIcon}).addTo(map);		
 	}
 }
