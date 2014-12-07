@@ -203,8 +203,8 @@ function start_auto_refresh() {
 
 // var url = 'http://data.itsfactory.fi/journeys/api/1/vehicle-activity/'
 
-var url = 'http://localhost:8080/get_buses'
-//var url = 'http://localhost:8080/get_test_buses'
+//var url = 'http://localhost:8080/get_buses'
+var url = 'http://localhost:8080/get_test_buses'
 
 // var url = 'http://data.itsfactory.fi/journeys/api/1/vehicle-activity/?lineRef=21&callback=?'
 
@@ -244,12 +244,14 @@ function returnDataHandler(data) {
 		
 		var lineRef = data.body[i].monitoredVehicleJourney.lineRef;
 		var vehicleRef = data.body[i].monitoredVehicleJourney.vehicleRef;
+		var speed = data.body[i].monitoredVehicleJourney.speed;
+		var bearing = data.body[i].monitoredVehicleJourney.bearing;
 		var loc = data.body[i].monitoredVehicleJourney.vehicleLocation;
 		var lat = parseFloat(loc.latitude);
 		var lng = parseFloat(loc.longitude);
 		console.log('Line, vehicle, lat, lng:', lineRef, vehicleRef, lat,lng);
 		
-		recordBusData(vehicleRef,lineRef,lat,lng);
+		recordBusData(vehicleRef,lineRef,lat,lng,speed,bearing,timestamp);
 		
 /* 		L.circleMarker([lat,lng], {
 			color: 'black',
@@ -286,27 +288,33 @@ var busDataTable = {
 		}
 }
 
-function recordBusData(vehicleRef,lineRef,lat,lng) {
+function recordBusData(vehicleRef,lineRef,lat,lng,speed,bearing,timestamp) {
 	if (!busDataTable[vehicleRef]) {
 		busDataTable[vehicleRef] = {};
 	}
 	busDataTable[vehicleRef].name = lineRef;
 	busDataTable[vehicleRef].lat = lat;
 	busDataTable[vehicleRef].lng = lng;
+	busDataTable[vehicleRef].speed = speed;
+	busDataTable[vehicleRef].bearing = bearing;
 	if (!busDataTable[vehicleRef].positions) {
 		busDataTable[vehicleRef].positions = [];
 	}
-	busDataTable[vehicleRef].positions.push([lat,lng]);
+	busDataTable[vehicleRef].positions.unshift([lat,lng]); //Insert at head
 	if (busDataTable[vehicleRef].positions.length > 5) {
-		busDataTable[vehicleRef].positions.shift();
+		busDataTable[vehicleRef].positions.pop();
 	}
 	if (!busDataTable[vehicleRef].markers) {
 		busDataTable[vehicleRef].markers = [];
+	}	
+	if (!busDataTable[vehicleRef].timestamps) {
+		busDataTable[vehicleRef].timestamps = [];
 	}
 	console.log('busDataTable[',vehicleRef,']is now:', busDataTable[vehicleRef]);	
 }
 
-var opacityTable = [0.2, 0.3, 0.4, 0.6, 1.0];
+var opacityTableOLD = [0.2, 0.3, 0.4, 0.6, 1.0];
+var opacityTable = [1.0, 0.6, 0.4, 0.3, 0.2];
 
 function renderBusData () {
 	for (var vehicleRef in busDataTable) {
@@ -325,15 +333,18 @@ function renderBusData () {
 				console.log('newmarker:', newmarker);
 				bus.markers[pos] = newmarker;
 			}
-			if (pos == 4) {
-				console.log(4);
-				bus.markers[pos].setIcon(busIcon);
-			}
 			bus.markers[pos].setLatLng([lat,lng]);
-			bus.markers[pos].setOpacity(opacityTable[pos]);
-			
+			bus.markers[pos].setOpacity(opacityTable[pos]);	
+			if (pos == 0) {   //If we are at head (could be empty so we never come here)
+				bus.markers[0].setIcon(busIcon);  //Force head marker
+			}
 		}
+		adjustMarkerIndicators(bus); //and add indicators (speed etc)
 	}
+}
+
+function adjustMarkerIndicators (marker) {
+	console.log('adjustMarkerIndicators for',marker);
 }
 
 function renderBusDataOLD () {
