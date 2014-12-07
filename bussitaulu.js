@@ -179,6 +179,15 @@ function createHTMLicon (htmlOrText, classNames) {
 	});
 }
 
+function createSpeedIcon () {
+	return L.divIcon({
+		className: 'speed-icon',   //'bus-icon'
+		iconSize: [5,50],
+		html: ''
+	});
+}
+
+
 
 
 var interval1;
@@ -278,13 +287,17 @@ var busDataTable = {
 		'name': 'testVehicle',
 		'number': '99',
 		'lat': 61.4732485,
-		'lng': 23.8096987
+		'lng': 23.8096987,
+		'speed': 40,
+		'bearing': 30		
 		},
 	'dummy': {
 		'name': 'oho',
 		'number': '98',
 		'lat': 61.4701385,
-		'lng': 23.8025887
+		'lng': 23.8025887,
+		'speed': 35,
+		'bearing': 190	
 		}
 }
 
@@ -319,10 +332,6 @@ var opacityTable = [1.0, 0.6, 0.4, 0.3, 0.2];
 function renderBusData () {
 	for (var vehicleRef in busDataTable) {
 		var bus = busDataTable[vehicleRef];
-		//Remove old markers if any
-		//for (var i in bus.markers) {
-		//	bus.marker[i].off();
-		//}
 		var busIcon = createHTMLicon(bus.name, 'bus-icon');
 		var trailIcon = createHTMLicon(bus.name, 'trail-icon');
 		for (var pos in bus.positions) {
@@ -339,21 +348,25 @@ function renderBusData () {
 				bus.markers[0].setIcon(busIcon);  //Force head marker
 			}
 		}
-		adjustMarkerIndicators(bus); //and add indicators (speed etc)
+		adjustBusIndicators(bus); //and add indicators (speed etc)
 	}
 }
 
-function adjustMarkerIndicators (marker) {
-	console.log('adjustMarkerIndicators for',marker);
+function adjustBusIndicators (bus) {
+	//console.log('adjustBusIndicators for',bus);
+	if (!bus.speedMarker) {
+		var speedIcon = createSpeedIcon();
+		bus.speedMarker = L.marker([bus.lat,bus.lng], {icon:speedIcon}).addTo(map);		
+	}
+	bus.speedMarker.setLatLng([bus.lat,bus.lng]);
+	console.log('speedMarker icon=',bus.speedMarker._icon.style);
+	var intSpeed = parseInt(bus.speed);
+	var intBearing = parseInt(bus.bearing);
+	bus.speedMarker._icon.style.height = intSpeed+'px';
+	bus.speedMarker._icon.style.transform += ' rotate('+intBearing+'deg)';
 }
 
-function renderBusDataOLD () {
-	for (var vehicleRef in busDataTable) {
-		var bus = busDataTable[vehicleRef];
-		var busIcon = createHTMLicon(bus.name, 'bus-icon');
-		L.marker([bus.lat,bus.lng], {icon:busIcon}).addTo(map);		
-	}
-}
+
 
 renderBusMap();
 renderBusStops();
