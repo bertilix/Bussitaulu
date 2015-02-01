@@ -157,6 +157,8 @@ function onMapClick(e) {
 		.openOn(map);
 }
 
+var lngctr = lngctr || 23.78800;
+
 function onMapClick2(e) {
 	// Testing icons. See http://leafletjs.com/reference.html#divicon
 	var busIcon = L.divIcon({
@@ -164,17 +166,22 @@ function onMapClick2(e) {
 		iconSize: [20,20],
 		html: '33'
 	});
-	var busIcon21 = createHTMLicon('21');
 	L.marker([61.45701, 23.78500], {icon:busIcon}).addTo(map);			
-	L.marker([61.45701, 23.78800], {icon:busIcon21}).addTo(map);			
+
+	var html = '<div><img src="http://localhost:8080/pics/bussi40.png"></img></div>';
+	var busIcon21 = createHTMLicon(20,20,html,'bus-icon-circle');
+	L.marker([61.45701, lngctr], {icon:busIcon21}).addTo(map);			
+
+	lngctr += 0.003;
 }
+	
 
 map.on('click', onMapClick2);
 
-function createHTMLicon (htmlOrText, classNames) {
+function createHTMLicon (sizex, sizey, htmlOrText, classNames) {
 	return L.divIcon({
 		className: classNames,   //'bus-icon'
-		iconSize: [20,20],
+		iconSize: [sizex,sizey],
 		html: htmlOrText
 	});
 }
@@ -182,8 +189,8 @@ function createHTMLicon (htmlOrText, classNames) {
 function createSpeedIcon () {
 	return L.divIcon({
 		className: 'speed-icon',   //'bus-icon'
-		iconSize: [5,50],
-		html: ''
+		iconSize: [38,38],
+		html: 'A'
 	});
 }
 
@@ -327,13 +334,13 @@ function recordBusData(vehicleRef,lineRef,lat,lng,speed,bearing,timestamp) {
 }
 
 var opacityTableOLD = [0.2, 0.3, 0.4, 0.6, 1.0];
-var opacityTable = [1.0, 0.6, 0.4, 0.3, 0.2];
+var opacityTable = [1.0, 0.4, 0.3, 0.2, 0.1];
 
 function renderBusData () {
 	for (var vehicleRef in busDataTable) {
 		var bus = busDataTable[vehicleRef];
-		var busIcon = createHTMLicon(bus.name, 'bus-icon');
-		var trailIcon = createHTMLicon(bus.name, 'trail-icon');
+		var busIcon = createHTMLicon(22,22, bus.name, 'bus-icon');
+		var trailIcon = createHTMLicon(40,40, '', 'trail-icon');
 		for (var pos in bus.positions) {
 			var lat = bus.positions[pos][0];
 			var lng = bus.positions[pos][1];
@@ -362,7 +369,7 @@ function adjustBusIndicators (bus) {
 	console.log('speedMarker icon=',bus.speedMarker._icon.style);
 	var intSpeed = parseInt(bus.speed);
 	var intBearing = parseInt(bus.bearing);
-	bus.speedMarker._icon.style.height = intSpeed+'px';
+	//bus.speedMarker._icon.style.height = intSpeed+'px';
 	bus.speedMarker._icon.style.transform += ' rotate('+intBearing+'deg)';
 }
 
