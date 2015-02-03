@@ -219,8 +219,8 @@ function start_auto_refresh() {
 
 // var url = 'http://data.itsfactory.fi/journeys/api/1/vehicle-activity/'
 
-//var url = 'http://localhost:8080/get_buses'
-var url = 'http://localhost:8080/get_test_buses'
+var url = 'http://localhost:8080/get_buses'
+//var url = 'http://localhost:8080/get_test_buses'
 
 // var url = 'http://data.itsfactory.fi/journeys/api/1/vehicle-activity/?lineRef=21&callback=?'
 
@@ -252,7 +252,7 @@ function returnDataHandler(data) {
 		//Now we replace the timestamp DIV for every bus. 
 		//Do something more sensible...
 		var timestamp = data.body[i].recordedAtTime;
-		console.log('timestamp:',timestamp);
+		//console.log('timestamp:',timestamp);
 		if (timestamp) {
 			var timediv = document.getElementById('timestamp');
 			timediv.innerHTML = timestamp;
@@ -265,7 +265,7 @@ function returnDataHandler(data) {
 		var loc = data.body[i].monitoredVehicleJourney.vehicleLocation;
 		var lat = parseFloat(loc.latitude);
 		var lng = parseFloat(loc.longitude);
-		console.log('Line, vehicle, lat, lng:', lineRef, vehicleRef, lat,lng);
+		//console.log('Line, vehicle, lat, lng:', lineRef, vehicleRef, lat,lng);
 		
 		recordBusData(vehicleRef,lineRef,lat,lng,speed,bearing,timestamp);
 		
@@ -290,6 +290,7 @@ function returnDataHandler(data) {
 }
 
 var busDataTable = {
+	/*
 	'testVehicleRef': {
 		'name': 'testVehicle',
 		'number': '99',
@@ -306,6 +307,7 @@ var busDataTable = {
 		'speed': 35,
 		'bearing': 190	
 		}
+	*/
 }
 
 function recordBusData(vehicleRef,lineRef,lat,lng,speed,bearing,timestamp) {
@@ -330,7 +332,7 @@ function recordBusData(vehicleRef,lineRef,lat,lng,speed,bearing,timestamp) {
 	if (!busDataTable[vehicleRef].timestamps) {
 		busDataTable[vehicleRef].timestamps = [];
 	}
-	console.log('busDataTable[',vehicleRef,']is now:', busDataTable[vehicleRef]);	
+	//console.log('busDataTable[',vehicleRef,']is now:', busDataTable[vehicleRef]);	
 }
 
 var opacityTableOLD = [0.2, 0.3, 0.4, 0.6, 1.0];
@@ -346,7 +348,7 @@ function renderBusData () {
 			var lng = bus.positions[pos][1];
 			if (!bus.markers[pos]) {
 				var newmarker = L.marker([lat,lng], {icon:trailIcon}).addTo(map);
-				console.log('newmarker:', newmarker);
+				//console.log('newmarker:', newmarker);
 				bus.markers[pos] = newmarker;
 			}
 			bus.markers[pos].setLatLng([lat,lng]);
@@ -359,6 +361,9 @@ function renderBusData () {
 	}
 }
 
+var speedToOpacity = { 0: 0, 10: 0.5, 20: 0.6, 30: 0.7, 40: 0.8, 50: 0.9, 60: 1.0, 70: 1.0, 80: 1.0, 90: 1.0, 100: 1.0 }
+
+
 function adjustBusIndicators (bus) {
 	//console.log('adjustBusIndicators for',bus);
 	if (!bus.speedMarker) {
@@ -366,11 +371,15 @@ function adjustBusIndicators (bus) {
 		bus.speedMarker = L.marker([bus.lat,bus.lng], {icon:speedIcon}).addTo(map);		
 	}
 	bus.speedMarker.setLatLng([bus.lat,bus.lng]);
-	console.log('speedMarker icon=',bus.speedMarker._icon.style);
-	var intSpeed = parseInt(bus.speed);
+
 	var intBearing = parseInt(bus.bearing);
-	//bus.speedMarker._icon.style.height = intSpeed+'px';
 	bus.speedMarker._icon.style.transform += ' rotate('+intBearing+'deg)';
+	bus.speedMarker._icon.style.webkitTransform += ' rotate('+intBearing+'deg)';
+
+	var intSpeed = parseInt(bus.speed);
+	var quantizedSpeed = Math.round(intSpeed/10)*10;
+	var opacity = speedToOpacity[quantizedSpeed];
+	bus.speedMarker._icon.style.opacity = opacity;	
 }
 
 

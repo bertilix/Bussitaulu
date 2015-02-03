@@ -7,73 +7,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	 <link rel="stylesheet" href="bussitaulu.css" />
 </head>
 <body>
-	<img src="pics/bussi20.png"></img>
-	<style>
-		.bus-icon {
-			border: none;
-			background-image: url("pics/bussi40.png");
-			background-size: 22px 22px;
-			color: white;
-			opacity: 1.0;
-			font-size: 14px;
-			text-align: center;
-			z-index: 200;
-		}		
-		.bus-icon-box {
-			border: 1px solid black;
-			background: #a00; /*Fallback if rgba below fails*/
-			background: rgba(255,0,0,1.0);
-			color: white;
-			opacity: 1.0;
-			text-align: center;
-			z-index: 200;
-		}
-		.trail-icon  {
-			z-index: 1;
-			border: none; /*2px solid orange*/;
-			background-image: url("pics/bussi40liteholeorange.png");
-			background-size: 40px 40px;	
-			color: white;
-			opacity: 1.0;
-			text-align: center;
-		}
-		.speed-icon-old {
-			border: 1px solid black;
-			background: blue; /*Fallback if rgba below fails*/
-			color: white;
-			opacity: 0.4;
-			text-align: center;
-			top: 40px;
-			transform: rotate(30deg);
-		}
 
-		.speed-icon {
-			border: none;
-			background-image: url("pics/bussi40liteholeorange.png");
-			background-size: 38px 38px;			
-			color: black;
-			opacity: 0.9;
-			text-align: center;
-			text-weight: bold;
-			font-size: 10px;
-			top: 0px;
-			transform: rotate(30deg);
-		}
-		
-	</style>
-
-
-	<div id="timestamp" style="position:fixed; top:15px;left:60px;padding:5px;z-index:99999;background-color:#ccc;opacity:0.6">
+	<div id="timestamp">
 		 Waiting for bus data...
 	</div>
 
-	<div id="controlpanel" style="position:fixed; color:#eee;bottom:15px;right:60px;padding:5px;z-index:99999;background-color:#444;opacity:0.8">
-		Control panel... 
-		<button onclick="start_auto_refresh()">Start autorefresh</button>
-		period in seconds:
-		<input type="number" id="intervalsetting" value="5">
+	<div id="controlpanel" >
+		<button onclick="start_auto_refresh()">Autorefresh</button>
+		<input type="number" id="intervalsetting" value="5">sec
 	</div>
 	
 	<div id="map" style="width: 1500px; height: 1200px"></div>
