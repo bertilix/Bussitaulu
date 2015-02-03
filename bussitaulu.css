@@ -1,0 +1,81 @@
+.bus-icon {
+	border: none;
+	background-image: url("pics/bussi40.png");
+	background-size: 22px 22px;
+	color: white;
+	opacity: 1.0;
+	font-size: 14px;
+	text-align: center;
+	z-index: 200;
+}		
+.bus-icon-box {
+	border: 1px solid black;
+	background: #a00; /*Fallback if rgba below fails*/
+	background: rgba(255,0,0,1.0);
+	color: white;
+	opacity: 1.0;
+	text-align: center;
+	z-index: 200;
+}
+.trail-icon  {
+	z-index: 1;
+	background-image: url("pics/bussi40trail.png");
+	background-size: 40px 40px;	
+	color: white;
+	opacity: 1.0;
+	text-align: center;
+}
+.speed-icon-old {
+	border: 1px solid black;
+	background: blue; /*Fallback if rgba below fails*/
+	color: white;
+	opacity: 0.4;
+	text-align: center;
+	top: 40px;
+	transform: rotate(30deg);
+}
+
+.speed-icon {
+	border: none;
+	background-image: url("pics/bussi40hole2orange_arrow.png");
+	background-size: 38px 38px;			
+	color: black;
+	opacity: 0.5;
+	text-align: center;
+	text-weight: bold;
+	font-size: 10px;
+	top: 0px;
+	transform: rotate(30deg);
+}
+
+
+#controlpanel {
+	position:fixed; 
+	color:#eee;
+	bottom:15px;
+	right:60px;
+	padding:5px;
+	z-index:99999;
+	background-color:#444;
+	opacity:0.6
+}
+
+#controlpanel input {
+	width: 25px;
+}
+
+#timestamp {
+	position:fixed; 
+	top:15px;
+	left:60px;
+	padding:5px;
+	z-index:99999;
+	background-color:#ccc;
+	opacity:0.6
+}
+
+#map {
+	position: relative;
+	width: 800px; 
+	height: 500px;
+}
