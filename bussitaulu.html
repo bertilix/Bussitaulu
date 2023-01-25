@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Nirvanan bussitilanne</title>
+	<title>Nyssetaulu</title>
 	<meta charset="utf-8" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-	 <link rel="stylesheet" href="bussitaulu.css" />
+    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="bussitaulu.css" />
 </head>
+
 <body>
 
 	<div id="timestamp">
-		 Waiting for bus data...
+		Waiting for bus data...
 	</div>
 
-	<div id="controlpanel" >
+	<div id="controlpanel">
 		<button onclick="start_auto_refresh()">Autorefresh</button>
 		<input type="number" id="intervalsetting" value="5">sec
 	</div>
-	
+
 	<div id="map" style="width: 1500px; height: 1200px"></div>
-	
+
 	<div>Leaflet dokut: <a href="http://leafletjs.com/reference.html">Dokut</a> </div>
-	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-	<script src="bussitaulu.js"></script>
+
+
+    <script src="node_modules/leaflet/dist/jquery.js"></script>
+    <script src="node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="bussitaulu.js"></script>
 </body>
+
 </html>

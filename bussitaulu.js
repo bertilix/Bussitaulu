@@ -1,14 +1,13 @@
+// Updating this for Leaflet changes, last visit was in 2015
+
 var map = L.map('map').setView([61.46006, 23.78664], 14);
 
 function renderBusMap () {
 
-	L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-		maxZoom: 18,
-		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-			'Imagery &copy; <a href="http://mapbox.com">Mapbox</a>',
-		id: 'examples.map-i875mjb7'
-	}).addTo(map);
+	var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map)
 	
 }
 
